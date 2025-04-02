@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mis Campañas - Biodiversidad.cl</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      background-color: #f0f4f3;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .campanias-wrapper {
+      max-width: 1100px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+    }
+
+    .campanias-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+
+    .campanias-header h2 {
+      color: #4caf50;
+    }
+
+    .btn-nueva-campania {
+      background-color: #1976d2;
+      color: white;
+      padding: 0.6rem 1.4rem;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .btn-nueva-campania:hover {
+      background-color: #0d47a1;
+    }
+
+    .campania-card {
+      background: #f5fff6;
+      border-left: 6px solid #66bb6a;
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+    }
+
+    .campania-card h4 {
+      color: #2e7d32;
+      margin-bottom: 0.5rem;
+    }
+
+    .campania-card p {
+      color: #555;
+      font-size: 0.95rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .campania-info {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    .campania-actions {
+      margin-top: 1rem;
+      display: flex;
+      gap: 0.6rem;
+    }
+
+    .campania-actions a {
+      padding: 0.4rem 1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: white;
+      display: inline-block;
+    }
+
+    .btn-editar {
+      background-color: #4caf50;
+    }
+
+    .btn-ver {
+      background-color: #0097a7;
+    }
+
+    .btn-eliminar {
+      background-color: #e53935;
+    }
+
+    .campania-actions a:hover {
+      opacity: 0.85;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Mi Panel</a></li>
+      <li><a href="mis-productos.html">Mis Productos</a></li>
+      <li><a href="perfil.html">Perfil</a></li>
+      <li><a href="campanias.html">Mis Campañas</a></li>
+      <li><a href="suscripcion.html">Suscripción</a></li>
+      <li><a href="index.html" class="btn-login">Salir</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="campanias-wrapper">
+      <div class="campanias-header">
+        <h2>Mis Campañas</h2>
+        <a href="nueva-campania.html" class="btn-nueva-campania"><i class="fas fa-plus"></i> Nueva campaña</a>
+      </div>
+
+      <!-- Campaña 1 -->
+      <div class="campania-card">
+        <h4>Reforestación Urbana</h4>
+        <p>Campaña para plantar árboles nativos en zonas urbanas con voluntarios locales.</p>
+        <div class="campania-info">Creada el: 12/03/2025</div>
+        <div class="campania-actions">
+          <a href="editar-campania.html" class="btn-editar"><i class="fas fa-edit"></i> Editar</a>
+          <a href="#" class="btn-ver"><i class="fas fa-eye"></i> Ver</a>
+          <a href="#" class="btn-eliminar"><i class="fas fa-trash-alt"></i> Eliminar</a>
+        </div>
+      </div>
+
+      <!-- Campaña 2 -->
+      <div class="campania-card">
+        <h4>Reducción de Plásticos</h4>
+        <p>Campaña educativa en colegios para fomentar el uso de productos reutilizables.</p>
+        <div class="campania-info">Creada el: 05/02/2025</div>
+        <div class="campania-actions">
+          <a href="editar-campania.html" class="btn-editar"><i class="fas fa-edit"></i> Editar</a>
+          <a href="#" class="btn-ver"><i class="fas fa-eye"></i> Ver</a>
+          <a href="#" class="btn-eliminar"><i class="fas fa-trash-alt"></i> Eliminar</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Biodiversidad.cl – Gracias por liderar el cambio.</p>
+  </footer>
+
+</body>
+</html>
+

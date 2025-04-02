@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mi Suscripción - Biodiversidad.cl</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    body {
+      background-color: #f0f4f3;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    .suscripcion-wrapper {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    }
+
+    .suscripcion-wrapper h2 {
+      color: #4caf50;
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .plan-actual {
+      background: #e8f5e9;
+      border-left: 6px solid #4caf50;
+      border-radius: 15px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+
+    .plan-actual h3 {
+      color: #2e7d32;
+      margin-bottom: 0.5rem;
+    }
+
+    .plan-actual p {
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    .acciones-suscripcion {
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .acciones-suscripcion a {
+      display: inline-block;
+      margin: 0.5rem;
+      padding: 0.7rem 1.5rem;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-cambiar {
+      background: #ff9800;
+      color: white;
+    }
+
+    .btn-cambiar:hover {
+      background: #ef6c00;
+    }
+
+    .btn-ver-planes {
+      background: #1976d2;
+      color: white;
+    }
+
+    .btn-ver-planes:hover {
+      background: #0d47a1;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="nav-logo"><i class="fas fa-leaf"></i> Biodiversidad.cl</div>
+    <ul class="nav-links">
+      <li><a href="dashboard.html">Mi Panel</a></li>
+      <li><a href="mis-productos.html">Mis Productos</a></li>
+      <li><a href="perfil.html">Perfil</a></li>
+      <li><a href="campanias.html">Mis Campañas</a></li>
+      <li><a href="suscripcion.html">Suscripción</a></li>
+      <li><a href="index.html" class="btn-login">Salir</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="suscripcion-wrapper">
+      <h2>Estado de tu Suscripción</h2>
+
+      <div class="plan-actual">
+        <h3>Plan Emprendedor</h3>
+        <p>Acceso completo a Marketplace, campañas, consultores y educación ambiental.  
+        <br>Renovación: <strong>01/04/2026</strong></p>
+      </div>
+
+      <div class="acciones-suscripcion">
+        <a href="membresias.html" class="btn-ver-planes"><i class="fas fa-list"></i> Ver otros planes</a>
+        <a href="#" class="btn-cambiar"><i class="fas fa-exchange-alt"></i> Cambiar mi plan</a>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2025 Biodiversidad.cl – Tu suscripción apoya iniciativas verdes.</p>
+  </footer>
+
+</body>
+</html>
