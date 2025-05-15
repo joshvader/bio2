@@ -22,22 +22,41 @@
       <li><a href="informacion.html">Información</a></li>
       <li><a href="membresias.html">Membresías</a></li>
       <li><a href="contacto.html">Contacto</a></li>
-      <li><a href="login.html" class="btn-login">Ingresar</a></li>
+      <li class="auth-buttons">
+        <a href="login.html" class="btn-login" id="loginBtn">Ingresar</a>
+        <a href="#" class="btn-logout" id="logoutBtn" style="display: none;">Cerrar Sesión</a>
+      </li>
     </ul>
   </nav>
 
   <!-- HERO -->
-  <header class="hero-banner">
-    <div class="hero-content">
-      <h1><span>Conectamos personas</span> con la biodiversidad</h1>
-      <p>Una plataforma sustentable, abierta y humana para el ecosistema verde.</p>
-      <div class="hero-cta">
-        <a href="marketplace.html" class="btn primary">Explorar</a>
-        <a href="login.html" class="btn secondary">Ingresar</a>
+  <header>
+    <div class="hero-slider">
+      <div class="hero-content">
+        <h1><span>Conectamos personas</span> con la biodiversidad</h1>
+        <p>Una plataforma sustentable, abierta y humana para el ecosistema verde.</p>
+        <div class="hero-cta">
+          <a href="marketplace.html" class="btn primary">Explorar</a>
+          <a href="login.html" class="btn secondary">Ingresar</a>
+        </div>
       </div>
-    </div>
-    <div class="hero-img">
-      <i class="fas fa-earth-americas fa-5x" style="color:#4caf50;"></i>
+      <div class="slider-container">
+        <div class="slide fade">
+          <img src="assets/slider/biodiversidad1.jpg" alt="Biodiversidad Chilena">
+        </div>
+        <div class="slide fade">
+          <img src="assets/slider/biodiversidad2.jpg" alt="Flora Nativa">
+        </div>
+        <div class="slide fade">
+          <img src="assets/slider/biodiversidad3.jpg" alt="Fauna Chilena">
+        </div>
+       
+        <div class="dots">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+      </div>
     </div>
   </header>
 
@@ -68,10 +87,89 @@
     </section>
   </main>
 
+  <!-- NOTICIAS Y BLOG -->
+  <section class="news-blog-section">
+    <div class="container">
+      <h2>Últimas Noticias y Artículos</h2>
+      <div class="content-grid">
+        <!-- Noticias -->
+        <div class="news-container">
+          <article class="content-card">
+            <img src="assets/news-1.jpg">
+            <div class="card-content">
+              <h3>Conservación de Especies Nativas</h3>
+              <p>Nuevos proyectos para proteger la flora endémica de Chile.</p>
+              <a href="#" class="read-more">Leer más</a>
+            </div>
+          </article>
+          <article class="content-card">
+            <img src="assets/news-2.jpg" alt="Noticia 2">
+            <div class="card-content">
+              <h3>Iniciativas Sustentables</h3>
+              <p>Comunidades locales implementan proyectos verdes.</p>
+              <a href="#" class="read-more">Leer más</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Blog -->
+        <div class="blog-container">
+          <article class="content-card">
+            <img src="assets/blog-1.png" alt="Blog 1">
+            <div class="card-content">
+              <h3>Guía de Compostaje</h3>
+              <p>Aprende a crear tu propio compost en casa.</p>
+              <a href="#" class="read-more">Leer más</a>
+            </div>
+          </article>
+          <article class="content-card">
+            <img src="assets/blog-2.jpg" alt="Blog 2">
+            <div class="card-content">
+              <h3>Biodiversidad Urbana</h3>
+              <p>Cómo crear espacios verdes en la ciudad.</p>
+              <a href="#" class="read-more">Leer más</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer class="footer">
     <p>© 2025 Biodiversidad.cl – Diseño funcional, emocional y humano.</p>
   </footer>
 
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function changeSlide(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+      
+      if (n > slides.length) {slideIndex = 1}
+      if (n < 1) {slideIndex = slides.length}
+
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex-1].style.display = "block";
+      dots[slideIndex-1].className += " active";
+    }
+
+    // Auto-slide
+    setInterval(() => changeSlide(1), 5000);
+  </script>
 </body>
 </html>
