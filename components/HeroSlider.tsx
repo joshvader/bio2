@@ -35,28 +35,29 @@ export default function HeroSlider() {
   }
 
   return (
-    <div className="hero-slider">
+    <div className="relative w-full">
       <div className="hero-content">
-        <h1><span>Conectamos personas</span> con la biodiversidad</h1>
-        <p style={{color: 'white'}}>Una plataforma sustentable, abierta y humana para el ecosistema verde.</p>
+        <h1>
+          <span className="text-primary">Conectamos personas</span> con la biodiversidad
+        </h1>
+        <p className="text-white">Una plataforma sustentable, abierta y humana para el ecosistema verde.</p>
         <div className="hero-cta">
-          <Link href="/marketplace" className="btn primary">Explorar</Link>
-          <Link href="/login" className="btn secondary">Ingresar</Link>
+          <Link href="/marketplace" className="btn btn-primary">Explorar</Link>
+          <Link href="/login" className="btn btn-secondary">Ingresar</Link>
         </div>
       </div>
       <div className="slider-container">
         {slides.map((slide, index) => (
           <div 
             key={index}
-            className={`slide fade ${index === currentSlide ? '' : ''}`}
-            style={{ display: index === currentSlide ? 'block' : 'none' }}
+            className={`${index === currentSlide ? 'block' : 'hidden'} fade`}
           >
             <Image
               src={slide.src}
               alt={slide.alt}
               width={1200}
               height={610}
-              style={{ width: '100%', height: '610px', objectFit: 'cover' }}
+              className="slide img"
             />
           </div>
         ))}
@@ -70,6 +71,9 @@ export default function HeroSlider() {
             />
           ))}
         </div>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black bg-opacity-40 z-20"></div>
       </div>
     </div>
   )

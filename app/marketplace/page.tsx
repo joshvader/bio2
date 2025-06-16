@@ -26,13 +26,17 @@ export default function Marketplace() {
     <>
       <Navbar />
       <main>
-        <section className="info-section">
-          <i className="fas fa-store icon"></i>
-          <h2>Marketplace Verde</h2>
-          <p>Explora productos y servicios amigables con el medio ambiente.</p>
-          <div className="hero-cta">
-            <Link href="#" className="btn primary"><i className="fas fa-filter"></i> Categoría</Link>
-            <Link href="#" className="btn secondary"><i className="fas fa-map-marker-alt"></i> Región</Link>
+        <section className="text-center py-16 px-8">
+          <i className="fas fa-store text-6xl text-primary mb-4"></i>
+          <h2 className="text-4xl font-bold mb-4 text-white">Marketplace Verde</h2>
+          <p className="text-xl text-white mb-8">Explora productos y servicios amigables con el medio ambiente.</p>
+          <div className="flex justify-center gap-4">
+            <Link href="#" className="btn btn-primary">
+              <i className="fas fa-filter mr-2"></i> Categoría
+            </Link>
+            <Link href="#" className="btn btn-secondary">
+              <i className="fas fa-map-marker-alt mr-2"></i> Región
+            </Link>
           </div>
         </section>
 
@@ -44,10 +48,11 @@ export default function Marketplace() {
                 alt={product.title}
                 width={400}
                 height={300}
+                className="w-full h-48 object-cover rounded-xl mb-4"
               />
-              <h4>{product.title}</h4>
-              <p>{product.price}</p>
-              <Link href="#" className="btn primary">Ver más</Link>
+              <h4 className="text-lg font-semibold mb-2">{product.title}</h4>
+              <p className="text-gray-600 mb-4">{product.price}</p>
+              <Link href="#" className="btn btn-primary">Ver más</Link>
             </div>
           ))}
         </section>

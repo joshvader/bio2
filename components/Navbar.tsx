@@ -28,7 +28,7 @@ export default function Navbar() {
         <li><Link href="/campanas">Campañas</Link></li>
         <li><Link href="/membresias">Membresías</Link></li>
         <li><Link href="/contacto">Contacto</Link></li>
-        <li className="auth-buttons">
+        <li className="flex gap-4">
           {!isLoggedIn ? (
             <Link href="/login" className="btn-login">Ingresar</Link>
           ) : (

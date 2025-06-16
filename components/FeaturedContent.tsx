@@ -13,6 +13,7 @@ export default function FeaturedContent() {
               alt="Chakana o Cruz Andina"
               width={624}
               height={400}
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="featured-info">

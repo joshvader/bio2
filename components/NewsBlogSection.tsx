@@ -31,9 +31,9 @@ export default function NewsBlogSection() {
   return (
     <section className="news-blog-section">
       <div className="container">
-        <h2>Últimas Noticias y Artículos</h2>
+        <h2 className="text-3xl font-bold text-center mb-8">Últimas Noticias y Artículos</h2>
         <div className="content-grid">
-          <div className="news-container">
+          <div className="space-y-6">
             {newsArticles.map((article, index) => (
               <article key={index} className="content-card">
                 <Image
@@ -41,17 +41,18 @@ export default function NewsBlogSection() {
                   alt={article.title}
                   width={400}
                   height={200}
+                  className="w-full h-48 object-cover"
                 />
                 <div className="card-content">
-                  <h3>{article.title}</h3>
-                  <p>{article.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
+                  <p className="text-gray-600 mb-4">{article.description}</p>
                   <Link href="#" className="read-more">Leer más</Link>
                 </div>
               </article>
             ))}
           </div>
 
-          <div className="blog-container">
+          <div className="space-y-6">
             {blogArticles.map((article, index) => (
               <article key={index} className="content-card">
                 <Image
@@ -59,10 +60,11 @@ export default function NewsBlogSection() {
                   alt={article.title}
                   width={400}
                   height={200}
+                  className="w-full h-48 object-cover"
                 />
                 <div className="card-content">
-                  <h3>{article.title}</h3>
-                  <p>{article.description}</p>
+                  <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
+                  <p className="text-gray-600 mb-4">{article.description}</p>
                   <Link href="#" className="read-more">Leer más</Link>
                 </div>
               </article>
