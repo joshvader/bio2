@@ -133,10 +133,6 @@
 
 .info-section {
   text-align: center;
-  /*background-color: rgb(30, 30, 30);
-  padding: 2.5rem 1.5rem;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);*/
   transition: transform 0.3s ease;
 }
 .section-image {
@@ -149,11 +145,10 @@
 .image-container {
   position: relative;
   width: 100%;
-  /* height opcional si quieres controlar espacio fijo */
-  padding-bottom: 56.25%; /* Esto crea una proporción 16:9 */
+  padding-bottom: 56.25%;
   overflow: hidden;
   border-radius: var(--radius);
-  background-color: #efe6c9; /* útil si la imagen no llena todo */
+  background-color: #efe6c9;
 }
 
 .section-image {
@@ -162,7 +157,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain; /* clave para mostrar la imagen completa */
+  object-fit: contain;
   display: block;
 }
 
@@ -170,7 +165,7 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.6); /* fondo semitransparente */
+  background: rgba(0, 0, 0, 0.6);
   color: white;
   padding: 0.5rem 1rem;
   text-align: left;
@@ -206,9 +201,6 @@
     background-color:rgb(30, 30, 30);
     border-top: 0px solid #e5e7eb;
   }
-  /* CSS del marketplace */
-
-  /* === Estilos para la sección Marketplace === */
 
 .product-grid {
     display: flex;
@@ -238,7 +230,7 @@
     border-radius: 12px;
     margin-bottom: 1rem;
   }
-  /* CSS del membresias */
+
   .membership-grid {
     display: flex;
     flex-wrap: wrap;
@@ -289,11 +281,8 @@
     margin: 1rem 0;
   }
 
-/* Estilos para la sección de noticias y blog */
 .news-blog-section {
   padding: 4rem 0;
-  /* background-color: #f9f9f9; */
-  /*background-color: #f1f8e9;*/
 }
 
 .container {
@@ -343,7 +332,6 @@
   font-weight: 600;
 }
 
-/* Estilos para los botones de autenticación */
 .auth-buttons {
   display: flex;
   gap: 1rem;
@@ -449,7 +437,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 3; /* Mayor que el overlay del slider */
+  z-index: 3;
   text-align: center;
   color: white;
   width: 80%;
@@ -480,16 +468,15 @@
 }
 
 .slider-buttons {
-  z-index: 4; /* Mayor que el hero-content para que los botones sean clickeables */
+  z-index: 4;
 }
 
 .dots {
-  z-index: 4; /* Mayor que el hero-content para que los dots sean clickeables */
+  z-index: 4;
 }
 
 .featured-content {
   padding: 4rem 0;
- /* background-color gradiant */
  background: #4CAF50;
 background: linear-gradient(90deg,rgba(76, 175, 80, 1) 3%, rgba(0, 0, 0, 1) 48%, rgba(0, 0, 0, 1) 96%);
 }
@@ -562,4 +549,3 @@ background: linear-gradient(180deg,rgba(218, 218, 232, 1) 3%, rgba(0, 0, 0, 1) 9
     height: 300px;
   }
 }
-  
